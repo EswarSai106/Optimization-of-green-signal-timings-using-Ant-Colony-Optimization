@@ -1,17 +1,17 @@
 import numpy as np
 from numpy import inf
+from numpy import random
 
 #given values for the problems
 
-d = np.array([[0,10,12,0]
-          ,[10,0,0,15]
-          ,[12,0,0,9]
-          ,[0,15,9,0]])
+d = random.randint(10,30, size=(4,4))
 
-w = np.array([[0,13,10,0]
-          ,[10,0,0,11]
-          ,[9,0,0,10]
-          ,[0,15,11,0]])
+np.fill_diagonal(d,0)
+np.fill_diagonal(np.fliplr(d), [0,0,0,0])
+w = random.randint(10,30, size=(4,4))
+
+np.fill_diagonal(w,0)
+np.fill_diagonal(np.fliplr(w), [0,0,0,0])
 
 
 iteration = 100
